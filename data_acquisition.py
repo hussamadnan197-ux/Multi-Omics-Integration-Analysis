@@ -17,4 +17,4 @@ def get_cancer_project_stats(project_id):
 
 if __name__ == "__main__":
     # سنبدأ بتجربة سرطان الدم بما أنك تعمل في مختبر باثولوجي
-    get_cancer_project_stats("TCGA-LAML")
+    get_cancer_project_stats("TCGA-LAML") 
