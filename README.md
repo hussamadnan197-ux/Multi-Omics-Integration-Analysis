@@ -1,61 +1,63 @@
 # 🧬 Integrated Multi-Omics Analysis for AML Biomarker Discovery
 
 ## 📋 Project Overview
-This research platform demonstrates a multi-dimensional approach to leukemia research by integrating **Clinical, Transcriptomic (RNA-Seq), and Genomic** datasets from the **TCGA-LAML** cohort. The project utilizes custom Python-based bioinformatics pipelines to identify molecular signatures and elucidate the genomic architecture of primary driver mutations.
-
-## 🛠️ Technical Methodology & Pipeline
-The analysis was executed through a robust pipeline designed for high-throughput data processing:
-* **Automated Data Acquisition:** Leveraging the **GDC REST API** for real-time retrieval of clinical and molecular profiles.
-* **Bioinformatics Integration:** Utilizing `Biopython` for genomic sequence analysis and transcript length calculations.
-* **Computational Engineering:** Implementation of advanced error-handling and data wrangling via `Pandas`, `Seaborn`, and `Matplotlib`.
+This research platform implements a multi-dimensional computational framework to integrate **Clinical, Transcriptomic (RNA-Seq), and Genomic** datasets from the **TCGA-LAML** cohort. The objective is to identify molecular signatures and metabolic vulnerabilities in Acute Myeloid Leukemia through automated bioinformatics pipelines.
 
 ---
 
-## 📊 Phase 1: Preliminary Data Profiling & Quality Control
-Initial exploratory data analysis (EDA) was conducted to ensure cohort balance and data integrity.
-* **Gender Distribution:** Analysis confirmed a balanced representation of male and female subjects within the simulation environment, ensuring a non-biased dataset.
-* **Population Spread:** Initial histogram profiling helped identify the primary age groups before moving to validated clinical cohorts.
-
-![Preliminary Analysis](preliminary_analysis.png)
-
----
-
-## 📈 Phase 2: Real-world Clinical Validation
-The analysis was expanded to 100 validated clinical cases of Acute Myeloid Leukemia to establish demographic baselines.
-* **Key Finding:** The cohort exhibited a mean age at diagnosis of **56.52 years**.
-* **Clinical Insight:** A statistically significant shift in disease prevalence was observed in patients **above the age of 60**, aligning with established hematological literature regarding geriatric leukemia risk.
-
-![Real-world Age Distribution](real_age_distribution.png)
-
----
-
-## 🧬 Phase 3: Transcriptomic Landscape (RNA-Seq)
-High-throughput transcriptomic read counts were processed to identify the gene expression signatures in leukemic blast samples.
-* **Top Marker:** Identification of **`MT-RNR2`** (Mitochondrial Ribosomal RNA 2) as the most abundant transcript.
-* **Biological Inference:** The overexpression of mitochondrial genes suggests a **Hyper-metabolic State**, reflecting the intense energy requirements for rapid malignant cell proliferation.
-
-![Top Expressed Genes](top_expressed_genes.png)
-
----
-
-## 🎯 Phase 4: Genomic Architecture & Driver Identification
-This stage investigated the correlation between gene physical structure (bp length) and somatic mutation frequency.
-* **Structural Bias Analysis:** While large-scale genes like `TTN` (109,224 bp) naturally exhibit high mutation counts, we focused on identifying high-density drivers.
-* **Primary Genomic Driver:** **`TP53`** was identified as a critical mutated gene despite its compact transcript length of only **2,512 bp**. This disproportionate "mutation density" confirms its role as a pivotal driver in AML pathogenesis.
-
-![Mutational Burden](mutation_length_analysis.png)
-
----
-
-## 📚 Phase 5: Framework Pilot Testing
-A pilot study was conducted to validate the visualization framework, predicting disease distribution patterns.
-* **Observation:** The pilot successfully predicted bimodal age distributions, which were later confirmed in the full-scale clinical cohort analysis.
+## 🛠️ Phase 1: Framework Development & Pilot Testing
+Before large-scale integration, a pilot study was conducted to validate the visualization pipeline and ensure the reliability of the diagnostic tools.
+* **Initial Visualization:** Successfully validated the distribution plotting functions using a sample subset.
+* **Predictive Success:** The pilot accurately predicted bimodal age distribution patterns, which were later confirmed in the full-scale clinical analysis.
 
 ![Pilot Distribution](age_distribution.png)
+*Fig 1: Initial framework testing and pilot age distribution analysis.*
 
 ---
 
-## 🚀 Reproducibility & Environment
-1. **Requirements:** `pip install pandas biopython seaborn matplotlib requests`.
-2. **System Execution:** Run `data_acquisition.py` to trigger the automated API fetch and full analysis sequence.
+## 📊 Phase 2: Preliminary Data Profiling (Quality Control)
+Ensuring data integrity through Exploratory Data Analysis (EDA) on simulated environments to avoid biased interpretations.
+* **Gender Parity:** Analysis confirmed a balanced representation of male and female subjects (approx. 110:85 ratio), ensuring gender-neutral findings.
+* **Population Spread:** Mapped initial age spreads to establish a comparative baseline for real-world clinical data.
 
+![Preliminary Analysis](preliminary_analysis.png)
+*Fig 2: Data profiling and Gender/Age distribution for cohort quality control.*
+
+---
+
+## 📈 Phase 3: Real-world Clinical Validation (TCGA-LAML)
+Transitioned the pipeline to analyze 100 validated clinical cases retrieved via the **National Cancer Institute (GDC API)**.
+* **Demographic Benchmark:** The mean age at diagnosis was identified as **56.52 years**.
+* **Clinical Observation:** Data revealed a significant prevalence spike in patients **above age 60**, aligning with high-risk geriatric AML clinical patterns.
+
+![Real-world Age Distribution](real_age_distribution.png)
+*Fig 3: Validated age-at-diagnosis trends in the real-world TCGA-LAML cohort.*
+
+---
+
+## 🧬 Phase 4: Transcriptomic Landscape (RNA-Seq Analysis)
+Deep-dive into gene expression signatures to identify the metabolic hallmark of leukemic blast cells.
+* **Primary Biomarker:** Identified **`MT-RNR2`** (Mitochondrial Ribosomal RNA 2) as the most significantly overexpressed transcript.
+* **Metabolic Signature:** The dominance of mitochondrial transcripts indicates a **Hyper-metabolic State**, reflecting intense bioenergetic demands for rapid malignant cell proliferation.
+
+![Top Expressed Genes](top_expressed_genes.png)
+*Fig 4: Normalized RNA-Seq read counts highlighting the top 10 expressed genes.*
+
+---
+
+## 🎯 Phase 5: Genomic Architecture & Mutational Burden
+Investigating structural genomic drivers by correlating gene physical length (bp) with somatic mutation frequency.
+* **Structural Bias Analysis:** Distinguished between stochastic mutations in large genes (e.g., **`TTN`** at 109,224 bp) and high-density clinical drivers.
+* **Driver Discovery:** Identified **`TP53`** as a high-density driver; despite its compact size (**2,512 bp**), its disproportionate mutation rate underscores its critical role in AML pathogenesis.
+
+![Mutational Burden](mutation_length_analysis.png)
+*Fig 5: Correlation analysis between transcript length and mutational density.*
+
+---
+
+## 🚀 Technical Implementation
+* **Languages:** Python 3.12
+* **Library Stack:** `Pandas`, `Biopython`, `Seaborn`, `Matplotlib`, `Requests`.
+* **Data Source:** Automated retrieval via GDC REST API with custom dynamic error-handling for API schema variations.
+
+---
