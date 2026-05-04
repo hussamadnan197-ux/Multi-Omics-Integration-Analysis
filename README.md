@@ -18,5 +18,11 @@ After connecting to the GDC API, I analyzed 100 real clinical cases of Acute Mye
 I processed raw transcriptomic data from a TCGA-LAML patient to identify high-abundance gene transcripts.
 - **Top Gene:** `MT-RNR2` (Mitochondrial Ribosomal RNA 2).
 - **Insight:** High expression of mitochondrial genes suggests intense metabolic demands within the leukemic cells.
+- ## 🧬 Mutation Analysis & Gene Architecture
+I analyzed the top mutated genes in the TCGA-LAML cohort, correlating mutation frequency with transcript length.
+- **Key Observation:** Large genes like `TTN` show high mutation counts due to their size (109k+ bp).
+- **Clinical Insight:** `TP53` mutations were identified despite its small genomic footprint (2,512 bp), highlighting its critical role as a driver mutation in leukemia.
+
+![Mutation Length Analysis](mutation_length_analysis.png)
 
 ![Top Expressed Genes](top_expressed_genes.png)
