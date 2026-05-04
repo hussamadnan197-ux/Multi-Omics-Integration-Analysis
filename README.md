@@ -7,4 +7,5 @@ Libraries: Pandas, NumPy, Scikit-learn, Matplotlib, BioPython.
 Data Source: TCGA (The Cancer Genome Atlas
 🏗️ Under Development: Currently performing data cleaning and exploratory data analysis (EDA).
 ## Preliminary Data Insights
+![Age Distribution](age_distribution.png)
 ![Analysis Results](preliminary_analysis.png)
