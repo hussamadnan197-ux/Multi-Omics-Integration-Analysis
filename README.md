@@ -9,3 +9,9 @@ Data Source: TCGA (The Cancer Genome Atlas
 ## Preliminary Data Insights
 ![Age Distribution](age_distribution.png)
 ![Analysis Results](preliminary_analysis.png)
+## 📊 Real-world Data Insights (TCGA-LAML)
+After connecting to the GDC API, I analyzed 100 real clinical cases of Acute Myeloid Leukemia.
+- **Average Age:** 56.52 years.
+- **Key Observation:** The data shows a significant increase in cases for patients above the age of 60.
+
+![Real Age Distribution](real_age_distribution.png)
