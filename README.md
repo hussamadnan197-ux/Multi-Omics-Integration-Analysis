@@ -1,33 +1,42 @@
-🧬 Integrated Multi-Omics Analysis for AML Biomarker Discovery
-📋 Executive Summary
-This project demonstrates a multi-dimensional approach to leukemia research by integrating Clinical, Transcriptomic (RNA-Seq), and Genomic data from the TCGA-LAML cohort. The goal is to identify molecular signatures that differentiate leukemic cells and understand the genomic architecture of driver mutations.
-🛠️ Tech Stack & Methodology
-Programming: Python 3.12.
+# 🧬 Integrated Multi-Omics Analysis for AML Biomarker Discovery
 
-Bioinformatics Tools: Biopython for genomic data processing.
+## 📋 Executive Summary
+This research-oriented project focuses on the computational integration of heterogeneous biological datasets (Clinical, Transcriptomic, and Genomic) to identify molecular drivers in **Acute Myeloid Leukemia (TCGA-LAML)**. By bridging the gap between raw data acquisition and clinical interpretation, this pipeline uncovers significant patterns in gene expression and mutational landscapes.
 
-Data Science: Pandas for data wrangling, Seaborn and Matplotlib for high-impact biological visualizations.
+## 🛠️ Tech Stack & Methodology
+* **Data Acquisition:** Automated retrieval from the **NIH National Cancer Institute (GDC Data Portal)** using Python-based REST APIs.
+* **Core Libraries:** `Pandas` for robust data wrangling, `Seaborn/Matplotlib` for high-dimensional visualization, and `Biopython` for genomic sequence handling.
+* **Pipeline Strategy:** Developed a dynamic error-handling framework to manage shifting API schemas, ensuring reproducible data cleaning and normalization.
 
-Data Source: National Cancer Institute (GDC API) - Real-world patient data.
-📊 Phase 1: Clinical Cohort Profiling
-Analysis was performed on a cohort of 100 AML patients to establish demographic baselines.
+---
 
-*Key Finding: The average age at diagnosis was 56.52 years.
+## 📊 Phase 1: Clinical Cohort Profiling
+Exploratory Data Analysis (EDA) was performed on a cohort of 100 AML cases to establish a baseline for subsequent molecular analysis.
+* **Demographic Findings:** The mean age at diagnosis was identified as **56.52 years**.
+* **Biological Trend:** A distinct shift in disease prevalence was observed in patients **above the age of 60**, aligning with established hematological literature.
 
-*Observation: Data visualization revealed a significant spike in disease prevalence for individuals above age 60, correlating with known clinical patterns of AML.
-🧬 Phase 2: Transcriptomic Signature (RNA-Seq)
-I processed transcriptomic read counts to identify the most active genes in leukemic blast samples.
+![Age Distribution Analysis](real_age_distribution.png)
 
-*Top Gene Identified: MT-RNR2 (Mitochondrial Ribosomal RNA 2).
+---
 
-*Biological Insight: The massive expression of mitochondrial genes suggests an intense metabolic demand and oxidative phosphorylation activity within the leukemic microenvironment.
-🧬 Phase 2: Transcriptomic Signature (RNA-Seq)
-I processed transcriptomic read counts to identify the most active genes in leukemic blast samples.
+## 🧬 Phase 2: Transcriptomic Signature (RNA-Seq)
+Analysis of high-throughput transcriptomic data was conducted to identify overexpressed RNA species in leukemic blasts.
+* **Dominant Transcript:** `MT-RNR2` (Mitochondrial Ribosomal RNA 2).
+* **Metabolic Inference:** The high abundance of mitochondrial gene transcripts suggests a hyper-metabolic state, characteristic of rapid leukemic cell proliferation and intense energy demands.
 
-Top Gene Identified: MT-RNR2 (Mitochondrial Ribosomal RNA 2).
+![Top Expressed Genes](top_expressed_genes.png)
 
-Biological Insight: The massive expression of mitochondrial genes suggests an intense metabolic demand and oxidative phosphorylation activity within the leukemic microenvironment.
-🚀 Installation & Reproducibility
-1_Requirements: pip install -r requirements.txt.
+---
 
-2_Run Analysis: Execute data_acquisition.py to fetch fresh data and regenerate all plots.
+## 🎯 Phase 3: Genomic Architecture & Mutational Burden
+This phase investigated the correlation between gene physical structure (Transcript Length) and mutation frequency.
+* **Structural Bias:** Large-scale genes like `TTN` (109,224 bp) exhibited high raw mutation counts, largely attributed to their genomic footprint.
+* **Critical Driver Discovery:** Notably, **`TP53`** was identified as a top mutated gene despite having a small transcript length of only **2,512 bp**. This high "mutation density" relative to length underscores its role as a **Primary Genomic Driver** in AML pathogenesis.
+
+![Genomic Architecture Analysis](mutation_length_analysis.png)
+
+---
+
+## 🚀 Installation & Reproducibility
+1. **Requirements:** `pip install -r requirements.txt`
+2. **Run Analysis:** Execute `data_acquisition.py` to fetch fresh data and regenerate all plots.
