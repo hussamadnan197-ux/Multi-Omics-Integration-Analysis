@@ -64,28 +64,31 @@ The architecture is built for scalability and transparency:
 ---
 # 🧬 Multi-Omics Analysis of TCGA-LAML
 
-## 📊 Final Analysis Results
+## 📊 Phase 2: Integrated Results
 
 ### 1. Cohort Demographics
 | Gender Distribution | Age at Diagnosis |
 |---|---|
-| <img src="figures/gender_dist.png" width="400"> | <img src="figures/age_histogram.png" width="400"> |
+| ![Gender](figures/gender_dist.png) | ![Age](figures/age_histogram.png) |
+| *Balanced gender ratio.* | *Mean Age: 56.52 years.* |
 
 ---
 
-### 2. Survival Modeling (Kaplan-Meier)
+### 2. Survival Analysis Modeling
 
-#### **Overall Survival Baseline**
+#### **I. Molecular Risk Impact (Key Milestone)**
+By integrating genomic mutations with clinical data, we identified significant survival divergence.
 <p align="center">
-  <img src="figures/overall_survival.png" width="600">
+  <img src="figures/molecular_risk_impact.png" width="750">
 </p>
 
-#### **Molecular Risk Stratification**
+#### **II. Baseline & Clinical Comparisons**
 <p align="center">
-  <img src="figures/molecular_risk_impact.png" width="700">
+  <img src="figures/overall_survival.png" width="400">
+  <img src="figures/ل.png" width="400">
 </p>
 
-#### **Clinical Age Correlation**
-<p align="center">
-  <img src="figures/ل.png" width="600">
-</p>
+---
+
+## ✅ Project Status: Phase 2 Complete
+All visualizations are now integrated into the final analytical pipeline.
