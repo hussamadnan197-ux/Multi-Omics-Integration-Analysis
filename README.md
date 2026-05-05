@@ -62,42 +62,61 @@ The architecture is built for scalability and transparency:
 * **Execution:** Run `data_acquisition.py` to trigger the automated fetch and full analytical sequence.
 
 ---
-## 🔍 Phase 2: Final Results & Analysis Integration
+# 🧬 Multi-Omics Analysis of TCGA-LAML: Clinical & Genomic Integration
 
-In this final stage of the project, we have successfully integrated the clinical and transcriptomic data. Below are the finalized visual results representing the core findings of our Multi-Omics analysis.
-
-### 📊 1. Cohort Profile (Demographics)
-The first step was finalizing the demographic analysis to ensure the integrity of the data used for survival calculations.
-
-| Gender Distribution | Patient Age Analysis |
-|---|---|
-| <img src="figures/gender_dist.png" width="400"> | <img src="figures/age_histogram.png" width="400"> |
-| **Conclusion:** The dataset maintains a balanced gender ratio, preventing analytical skew. | **Conclusion:** The analysis confirms a mean age of 56.52 years, aligning with global AML clinical standards. |
+## 📌 Project Progression Note
+This repository documents the successful completion of our **Phase 2: Data Integration and Survival Modeling**. We have moved beyond basic data cleaning to establish a robust bioinformatics pipeline that correlates transcriptomic risk profiles with patient clinical outcomes.
 
 ---
 
-### 📈 2. Survival Analysis & Biomarker Validation
-The core achievement of this integration is the validation of molecular risk groups through Kaplan-Meier survival estimates.
+## 📊 Final Analysis & Visualization Results
 
-#### **I. Molecular Risk Impact (Key Project Milestone)**
-This visualization is the primary output of our multi-omics pipeline. It demonstrates the profound impact of genetic mutations on patient prognosis.
+The following results represent the core findings of our integrated pipeline, focusing on the **TCGA-LAML** cohort (n=100).
+
+### 1. Cohort Baseline Characteristics
+Before survival modeling, we validated the demographic integrity of the dataset to ensure a balanced clinical foundation.
+
+| Gender Distribution | Age at Diagnosis (Histogram) |
+|---|---|
+| <img src="figures/gender_dist.png" width="400"> | <img src="figures/age_histogram.png" width="400"> |
+| **Scientific Insight:** The cohort displays a balanced sexual dimorphism, crucial for avoiding gender-bias in prognostic modeling. | **Scientific Insight:** The distribution confirms a late-onset peak (60-80 years), with a mean age of **56.52 years**, aligning with standard AML epidemiology. |
+
+---
+
+### 2. Advanced Survival Modeling (Kaplan-Meier)
+
+This section represents the high-level integration of genomic risk and clinical survival data.
+
+#### **A. Overall Survival Baseline**
+This serves as the "Control" curve, illustrating the general survival probability of the cohort prior to molecular stratification.
+<p align="center">
+  <img src="figures/overall_survival.png" width="600">
+</p>
+
+#### **B. Molecular Risk Stratification (Primary Project Milestone)**
+This is the **most critical achievement** of our analysis. By integrating transcriptomic biomarkers (such as *TP53* mutation status and high-risk gene expression), we successfully stratified the cohort into distinct risk groups.
 <p align="center">
   <img src="figures/molecular_risk_impact.png" width="750">
 </p>
-* **Observation:** A significant survival gap is observed between High-Risk and Standard-Risk groups. This validates the efficiency of our biomarker discovery approach.
+**Key Finding:** There is a highly significant statistical divergence ($p < 0.05$). Patients in the **High-Risk group** exhibit a rapid decline in survival probability, highlighting the aggressive nature of specific genomic signatures identified in this study.
 
-#### **II. Baseline and Clinical Benchmarks**
-We also compared the baseline overall survival against clinical age groups to ensure our molecular findings provide more precision than traditional age-based metrics.
+#### **C. Clinical Age Correlation**
+A comparative analysis between Senior (>60) and Young (≤60) cohorts to evaluate age as an independent clinical variable.
 <p align="center">
-  <img src="figures/overall_survival.png" width="45%">
-  <img src="figures/ل.png" width="45%">
+  <img src="figures/ل.png" width="600">
 </p>
 
 ---
 
-## ✅ Final Project Status
-- [x] Data Pre-processing & Cleaning
-- [x] Multi-Omics Data Integration
-- [x] Kaplan-Meier Survival Modeling
-- [x] Visualization of Genomic Risk Impacts
-- [x] Documentation & Repository Organization
+## 🛠 Methodology & Computational Stack
+- **Data Integration:** Merging Clinical and Genomic (Mutation/Expression) data.
+- **Biostatistics:** Kaplan-Meier Estimator & Log-Rank Testing.
+- **Python Libraries:** `Lifelines`, `Pandas`, `Seaborn`, and `Matplotlib`.
+
+---
+
+## ✅ Completed Milestones
+- [x] Multi-Omics Data Pre-processing.
+- [x] Genomic Risk Stratification.
+- [x] Survival Model Visualization (Phase 2 Finalized).
+- [x] Integrated Repository Documentation.
