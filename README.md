@@ -62,3 +62,42 @@ The architecture is built for scalability and transparency:
 * **Execution:** Run `data_acquisition.py` to trigger the automated fetch and full analytical sequence.
 
 ---
+## 🔍 Phase 2: Final Results & Analysis Integration
+
+In this final stage of the project, we have successfully integrated the clinical and transcriptomic data. Below are the finalized visual results representing the core findings of our Multi-Omics analysis.
+
+### 📊 1. Cohort Profile (Demographics)
+The first step was finalizing the demographic analysis to ensure the integrity of the data used for survival calculations.
+
+| Gender Distribution | Patient Age Analysis |
+|---|---|
+| <img src="figures/gender_dist.png" width="400"> | <img src="figures/age_histogram.png" width="400"> |
+| **Conclusion:** The dataset maintains a balanced gender ratio, preventing analytical skew. | **Conclusion:** The analysis confirms a mean age of 56.52 years, aligning with global AML clinical standards. |
+
+---
+
+### 📈 2. Survival Analysis & Biomarker Validation
+The core achievement of this integration is the validation of molecular risk groups through Kaplan-Meier survival estimates.
+
+#### **I. Molecular Risk Impact (Key Project Milestone)**
+This visualization is the primary output of our multi-omics pipeline. It demonstrates the profound impact of genetic mutations on patient prognosis.
+<p align="center">
+  <img src="figures/molecular_risk_impact.png" width="750">
+</p>
+* **Observation:** A significant survival gap is observed between High-Risk and Standard-Risk groups. This validates the efficiency of our biomarker discovery approach.
+
+#### **II. Baseline and Clinical Benchmarks**
+We also compared the baseline overall survival against clinical age groups to ensure our molecular findings provide more precision than traditional age-based metrics.
+<p align="center">
+  <img src="figures/overall_survival.png" width="45%">
+  <img src="figures/ل.png" width="45%">
+</p>
+
+---
+
+## ✅ Final Project Status
+- [x] Data Pre-processing & Cleaning
+- [x] Multi-Omics Data Integration
+- [x] Kaplan-Meier Survival Modeling
+- [x] Visualization of Genomic Risk Impacts
+- [x] Documentation & Repository Organization
