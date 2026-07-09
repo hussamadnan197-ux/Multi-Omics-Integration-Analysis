@@ -40,7 +40,16 @@ The objective is to identify prognostic biomarkers associated with patient survi
 - 💻 Developed using Python and open-source bioinformatics libraries.
 
    ---
+## 🎯 Project Objectives
 
+The main objectives of this project are:
+
+- Integrate multi-omics datasets from TCGA-LAML.
+- Identify prognostic biomarkers associated with AML survival.
+- Explore transcriptomic and methylation alterations.
+- Investigate the relationship between genomic alterations and clinical outcomes.
+- Build a reproducible bioinformatics workflow using Python.
+---
 # 📊 Results & Visualizations
 
 ## 1. Cohort Demographics
@@ -96,6 +105,8 @@ Key observations include:
 
 # 🔬 Methods
 
+### Software & Libraries
+
 - Python 3.12
 - Pandas
 - NumPy
@@ -103,6 +114,10 @@ Key observations include:
 - Biopython
 - Lifelines
 
+### Dataset
+
+- TCGA-LAML (The Cancer Genome Atlas)
+- Genomic Data Commons (GDC) Data Portal
 ### Data
 
 - TCGA-LAML
@@ -126,13 +141,14 @@ AML-Multi-Omics-Biomarker-Discovery/
 
 ---
 
-# 🚀 Future Work
+## 🚀 Future Work
 
-- Differential Expression Analysis
-- GO Enrichment Analysis
+- Differential Gene Expression Analysis (DESeq2)
+- Gene Ontology (GO) Enrichment Analysis
 - KEGG Pathway Analysis
-- Machine Learning Prediction Models
-- External Validation Cohorts
+- Protein–Protein Interaction (PPI) Network Analysis
+- Machine Learning-based Biomarker Prediction
+- External Validation Using Independent AML Cohorts
 
 ---
 
