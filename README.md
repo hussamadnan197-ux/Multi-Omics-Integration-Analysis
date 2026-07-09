@@ -118,14 +118,10 @@ Key observations include:
 
 - TCGA-LAML (The Cancer Genome Atlas)
 - Genomic Data Commons (GDC) Data Portal
-### Data
-
-- TCGA-LAML
-- GDC Data Portal
 
 ---
 
-# 📁 Project Structure
+# 📁 Repository Structure
 
 ```
 AML-Multi-Omics-Biomarker-Discovery/
@@ -151,7 +147,10 @@ AML-Multi-Omics-Biomarker-Discovery/
 - External Validation Using Independent AML Cohorts
 
 ---
+## 📖 Citation
 
+If you find this repository useful for research or educational purposes, please cite the relevant TCGA publications and the references listed below.
+---
 # 📚 References
 
 - Ley TJ et al., NEJM (2013)
@@ -159,4 +158,8 @@ AML-Multi-Omics-Biomarker-Discovery/
 
 ---
 
-**Project Status:** 🟡 Ongoing Research Project
+## 📄 License
+
+This project is distributed under the MIT License.
+---
+> **Current Development Status:** Ongoing research project. Additional analyses and validation studies are currently in progress.
