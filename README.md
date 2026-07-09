@@ -1,4 +1,6 @@
-# 🧬 Integrated Multi-Omics Analysis for AML Biomarker Discovery
+
+ # 🧬 AML Multi-Omics Biomarker Discovery 
+ ### An integrated bioinformatics pipeline for transcriptomic, methylation, mutation, and clinical data analysis using TCGA Acute Myeloid Leukemia (LAML) datasets.
 📌 Abstract
 ​Acute Myeloid Leukemia (AML) is a heterogeneous hematological malignancy. This study presents a computational pipeline for integrated multi-omics analysis using TCGA-LAML data. By merging Clinical, RNA-Seq (TPM normalized), and somatic mutation data, we successfully stratified patient cohorts into distinct prognostic groups based on genomic risk and clinical variables.
 ​📊 Results & Visualizations
