@@ -1,15 +1,70 @@
-# 🧬 Integrated Multi-Omics Analysis for AML Biomarker Discovery
-📌 Abstract
-​Acute Myeloid Leukemia (AML) is a heterogeneous hematological malignancy. This study presents a computational pipeline for integrated multi-omics analysis using TCGA-LAML data. By merging Clinical, RNA-Seq (TPM normalized), and somatic mutation data, we successfully stratified patient cohorts into distinct prognostic groups based on genomic risk and clinical variables.
-​📊 Results & Visualizations
-​1. Cohort Demographics & Quality Control
-​Before survival modeling, the TCGA-LAML clinical cohort was stratified to ensure statistical robustness.
-​Gender Parity: Analysis revealed a balanced distribution (approx. 56:44 male-to-female ratio), mitigating sex-linked confounding variables.
-​Age Dynamics: The diagnostic mean age was identified as 56.52 years, with a Kernel Density Estimate (KDE) showing a significant prevalence surge in patients above age 60.
-​<p align="center">
-<img src="gender_dist.png" width="45%" />
-<img src="age_histogram.png" width="45%" />
+# 🧬 AML Multi-Omics Biomarker Discovery
+
+### An integrated bioinformatics pipeline for clinical, transcriptomic, methylation, and mutation data analysis using TCGA Acute Myeloid Leukemia (LAML) datasets.
+
+---
+## 📈 Project Status
+
+**Status:** 🟡 Ongoing
+
+**Dataset:** TCGA-LAML
+
+**Programming Language:** Python
+
+**Analysis:** Multi-Omics Integration
+
+**Current Stage:** Survival Analysis & Biomarker Discovery
+---
+## 📌 Abstract
+
+Acute Myeloid Leukemia (AML) is a heterogeneous hematological malignancy characterized by substantial genomic and clinical variability.
+
+This project presents an integrated bioinformatics workflow for analyzing publicly available TCGA-LAML datasets by combining:
+
+- Clinical data
+- RNA-Seq gene expression
+- DNA methylation
+- Somatic mutation profiles
+
+The objective is to identify prognostic biomarkers associated with patient survival and molecular risk.
+
+---
+## ⭐ Project Highlights
+
+- 🧬 Integrated multi-omics analysis of **TCGA-LAML** data.
+- 📊 Clinical cohort characterization and quality assessment.
+- 🧬 RNA-Seq transcriptomic analysis.
+- 🧪 DNA methylation integration.
+- 📈 Kaplan–Meier survival analysis using Lifelines.
+- 🔬 Identification of candidate prognostic biomarkers.
+- 💻 Developed using Python and open-source bioinformatics libraries.
+
+   ---
+## 🎯 Project Objectives
+
+The main objectives of this project are:
+
+- Integrate multi-omics datasets from TCGA-LAML.
+- Identify prognostic biomarkers associated with AML survival.
+- Explore transcriptomic and methylation alterations.
+- Investigate the relationship between genomic alterations and clinical outcomes.
+- Build a reproducible bioinformatics workflow using Python.
+---
+# 📊 Results & Visualizations
+
+## 1. Cohort Demographics
+
+The clinical cohort was explored before downstream analyses.
+
+- Balanced male/female distribution
+- Mean diagnostic age: **56.5 years**
+- Higher AML prevalence in patients older than 60 years
+
+<p align="center">
+<img src="figures/gender_dist.png" width="45%">
+<img src="figures/age_histogram.png" width="45%">
 </p>
+<<<<<<< HEAD
 <p align="center"><em>Fig 1: Demographic stratification and age-at-diagnosis density modeling.</em></p>
 ​2. Longitudinal Survival Outcomes (Kaplan-Meier)
 ​Using the Lifelines framework, we generated survival probability estimates to benchmark the clinical impact of age and molecular risk.
@@ -18,27 +73,104 @@
 ​<p align="center">
 <img src="figures/figures/figures/figures/figures/figures/figures/figures/figures/overall_survival.png" width="45%" />
 <img src="molecular_risk_impact.png" width="45%" />
+=======
+
+<p align="center">
+<b>Figure 1.</b> Demographic characteristics of the TCGA-LAML cohort.
+>>>>>>> 905d02dd15c55bcad873d9bb8cc8d777f96d92fc
 </p>
-<p align="center"><em>Fig 2: Kaplan-Meier survival curves demonstrating the impact of age and molecular risk on clinical prognosis.</em></p>
-​🧠 Discussion & Scientific Interpretation
-​The observed survival differences support the evidence that genomic features provide critical prognostic value.
-​Genomic Drivers: The high mutational density in driver genes such as TP53 provides a molecular basis for the observed survival disparities.
-​Transcriptomic Insights: Overexpressed mitochondrial signatures (e.g., MT-RNR2) suggest a potential shift in cellular bioenergetics (metabolic reprogramming) in leukemic cells.
-​Conclusion: This framework bridges the gap between raw sequencing data and clinical outcomes, establishing a scalable foundation for Precision Oncology and personalized biomarker discovery.
-​🔬 Methods & Technical Stack
-​Normalization: TPM (Transcripts Per Million) for RNA-Seq comparability.
-​Variant Filtering: Focus on non-synonymous somatic mutations.
-​Analysis: Kaplan–Meier estimators and Log-Rank testing via Lifelines.
-​Tech Stack: Python 3.12, Pandas, Seaborn, Matplotlib, Biopython.
-​Data Source: TCGA-LAML via GDC API.
-​⚠️ Limitations & Future Work
-​Limitations: Single cohort analysis (TCGA), absence of external validation, and exploratory nature of statistical methods.
-​Future Work: Perform pathway enrichment analysis (KEGG/GO) and develop predictive machine learning models to strengthen biological interpretation.
-​📚 References
-​Ley TJ et al. (2013). Genomic and Epigenomic Landscapes of Adult AML. New England Journal of Medicine (NEJM).
-​Papaemmanuil E et al. (2016). Genomic Classification and Prognosis in AML. New England Journal of Medicine (NEJM).
-​📁 Project Structure├── data/               # Raw and processed clinical/genomic data
-├── scripts/            # Python scripts for data acquisition & survival analysis
-├── results/            # Statistical outputs and tables
-├── figures/            # Generated visualizations (PNG/PDF)
-└── README.md           # Integrated Research Report
+
+---
+
+## 2. Survival Analysis
+
+Kaplan–Meier survival analysis was performed using the Lifelines Python package.
+
+Patients were stratified according to:
+
+- Age
+- Molecular risk
+
+<p align="center">
+<img src="figures/overall_survival.png" width="45%">
+<img src="figures/molecular_risk_impact.png" width="45%">
+</p>
+
+<p align="center">
+<b>Figure 2.</b> Overall survival analysis.
+</p>
+
+---
+
+# 🧠 Biological Interpretation
+
+The analysis indicates that genomic alterations contribute substantially to AML prognosis.
+
+Key observations include:
+
+- TP53 mutations are associated with poor survival.
+- Transcriptomic alterations suggest metabolic reprogramming.
+- Multi-omics integration improves biological interpretation compared with single-omics analysis.
+
+---
+
+# 🔬 Methods
+
+### Software & Libraries
+
+- Python 3.12
+- Pandas
+- NumPy
+- Matplotlib
+- Biopython
+- Lifelines
+
+### Dataset
+
+- TCGA-LAML (The Cancer Genome Atlas)
+- Genomic Data Commons (GDC) Data Portal
+
+---
+
+# 📁 Repository Structure
+
+```
+AML-Multi-Omics-Biomarker-Discovery/
+
+├── data/
+├── figures/
+├── scripts/
+├── results/
+├── tests/
+├── README.md
+└── requirements.txt
+```
+
+---
+
+## 🚀 Future Work
+
+- Differential Gene Expression Analysis (DESeq2)
+- Gene Ontology (GO) Enrichment Analysis
+- KEGG Pathway Analysis
+- Protein–Protein Interaction (PPI) Network Analysis
+- Machine Learning-based Biomarker Prediction
+- External Validation Using Independent AML Cohorts
+
+---
+## 📖 Citation
+
+If you find this repository useful for research or educational purposes, please cite the relevant TCGA publications and the references listed below.
+---
+# 📚 References
+
+- Ley TJ et al., NEJM (2013)
+- Papaemmanuil E et al., NEJM (2016)
+
+---
+
+## 📄 License
+
+This project is distributed under the MIT License.
+---
+> **Current Development Status:** Ongoing research project. Additional analyses and validation studies are currently in progress.
